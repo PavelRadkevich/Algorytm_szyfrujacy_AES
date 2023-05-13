@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="1100.0" style="-fx-background-color: #0f0e2b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kryptografiaInt.HelloController">
+   <children>
+      <TextField fx:id="textFieldKey" layoutX="353.0" layoutY="72.0" prefHeight="29.0" prefWidth="396.0" />
+      <Button layoutX="498.0" layoutY="116.0" mnemonicParsing="false" onAction="#onGenerateKeyButtonClick" prefHeight="30.0" prefWidth="107.0" text="Generate Key" />
+      <Text fill="WHITE" layoutX="522.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Text>
+      <Text fill="#3dff00" layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algorytm AES" wrappingWidth="119.58943939208984">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="textAreaUnencrypted" layoutX="35.0" layoutY="280.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="276.0" prefWidth="368.0" wrapText="true" />
+      <TextArea fx:id="textAreaEncrypted" layoutX="709.0" layoutY="280.0" prefHeight="276.0" prefWidth="368.0" wrapText="true" />
+      <Text fill="WHITE" layoutX="143.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unencrypted text">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="829.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypted text">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="43.0" layoutY="243.0" mnemonicParsing="false" onAction="#onLoadFileButtonClick" prefHeight="30.0" prefWidth="142.0" text="Load file">
+         <font>
+            <Font name="Cambria" size="12.44444465637207" />
+         </font></Button>
+      <Button layoutX="476.0" layoutY="304.0" mnemonicParsing="false" onAction="#onEncryptButtonClick" prefHeight="57.0" prefWidth="152.0" style="-fx-background-color: green;" text="Encrypt" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="474.0" layoutY="459.0" mnemonicParsing="false" onAction="#onDecryptButtonClick" prefHeight="57.0" prefWidth="152.0" style="-fx-background-color: red;" text="Decrypt" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="822.0" layoutY="243.0" mnemonicParsing="false" onAction="#onSaveFileButtonClick" prefHeight="30.0" prefWidth="142.0" text="Save file">
+         <font>
+            <Font name="Cambria" size="12.44444465637207" />
+         </font>
+      </Button>
+      <Button layoutX="250.0" layoutY="243.0" mnemonicParsing="false" onAction="#onSaveUnencryptedFileButtonClick" prefHeight="30.0" prefWidth="142.0" text="Save file">
+         <font>
+            <Font name="Cambria" size="12.44444465637207" />
+         </font>
+      </Button>
+   </children>
+</Pane>
