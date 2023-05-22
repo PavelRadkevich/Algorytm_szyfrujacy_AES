@@ -52,7 +52,7 @@ public class AES {
             dlugosc = wiadomosc.length;
         }
         else {
-            dlugosc = (wiadomosc.length / 16) * 16 + 1;
+            dlugosc = (wiadomosc.length / 16 + 1) * 16;
         }
         byte[] result = new byte[dlugosc];
         byte[] temp;
@@ -234,7 +234,7 @@ public class AES {
             }
             for (int j = 0; j < 4; j ++) {
                 for (int t = 0; t < 4; t++) {
-                    wiadomoscWBlokach[i / 16][j * 4 + t] = niesortowana[4 * t + j];
+                    wiadomoscWBlokach[i][j * 4 + t] = niesortowana[4 * t + j];
                 }
             }
         }

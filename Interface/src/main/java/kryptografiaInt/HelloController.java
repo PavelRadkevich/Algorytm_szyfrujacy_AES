@@ -10,6 +10,9 @@ import kryptografia.AES;
 import kryptografia.OperationsWithFiles;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 import static kryptografia.OperationsWithFiles.readFileAES;
 import static kryptografia.OperationsWithFiles.writeFileAES;
@@ -75,7 +78,7 @@ public class HelloController {
 
 
     @FXML
-    protected void onEncryptButtonClick() {
+    protected void onEncryptButtonClick() throws UnsupportedEncodingException {
         if (keyWBajtach == null) {
             onGenerateKeyButtonClick();
         }
@@ -88,6 +91,7 @@ public class HelloController {
         if (keyWBajtach == null) {
             throw new Exception("Podaj klucz");
         }
+
         tekstWBajtach = aes.decrypt(szyfrWBajtach, textFieldKey.getText().getBytes());
         textAreaUnencrypted.setText(new String(tekstWBajtach));
     }
